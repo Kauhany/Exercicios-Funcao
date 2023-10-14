@@ -137,3 +137,22 @@ SELECT produto, preco, quantidade,
         WHEN preco > 50.0 THEN 'Caro'
     END AS categoriaPreco
 FROM produtos;
+
+
+
+-- Exercicio 5 A
+
+DELIMITER //
+CREATE FUNCTION TOTAL_VALOR(preco DECIMAL(10, 2), quantidade INT)
+RETURNS DECIMAL(10, 2)
+DETERMINISTIC
+BEGIN
+    DECLARE total DECIMAL(10, 2);
+    SET total = preco * quantidade;
+    RETURN total;
+END;
+//
+DELIMITER ;
+
+SELECT produto, preco, quantidade, TOTAL_VALOR(preco, quantidade) AS valorTotal
+FROM produtos;
