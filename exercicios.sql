@@ -174,8 +174,15 @@ WHERE preco = (SELECT MAX(preco) FROM produtos);
 
 
 
--- Exercicio 6 A
+-- Exercicio 6 C
 
 SELECT produto, preco
 FROM produtos
 WHERE preco = (SELECT MIN(preco) FROM produtos);
+
+
+
+-- Exercicio 6 D
+
+SELECT SUM(IF(quantidade > 0, preco * quantidade, 0)) AS somaToal
+FROM produtos;
