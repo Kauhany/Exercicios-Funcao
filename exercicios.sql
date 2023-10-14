@@ -15,3 +15,9 @@ VALUES ('Roberta'),
 ('Roberto'),
 ('Maria Clara'),
 ('João');
+
+
+-- Exercicio 1 B
+
+SELECT UPPER(nome) AS nome
+FROM nomes;
