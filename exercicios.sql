@@ -186,3 +186,27 @@ WHERE preco = (SELECT MIN(preco) FROM produtos);
 
 SELECT SUM(IF(quantidade > 0, preco * quantidade, 0)) AS somaToal
 FROM produtos;
+
+
+
+-- Exercicio 7 A
+
+DELIMITER //
+CREATE FUNCTION calcularFatorial(n INT)
+RETURNS BIGINT
+DETERMINISTIC
+BEGIN
+    DECLARE resultado BIGINT DEFAULT 1;
+    DECLARE i INT DEFAULT 1;
+    
+    WHILE i <= n DO
+        SET resultado = resultado * i;
+        SET i = i + 1;
+    END WHILE;
+    
+    RETURN resultado;
+END;
+//
+DELIMITER ;
+
+SELECT calcularFatorial(5) AS resultado_fatorial;
