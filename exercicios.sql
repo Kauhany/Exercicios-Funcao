@@ -27,3 +27,14 @@ FROM nomes;
 
 SELECT nome, LENGTH(nome) AS tamanhoNome
 FROM nomes;
+
+
+
+-- Exercicio 1 D
+
+SELECT
+    CASE
+        WHEN nome IN ('João', 'Roberto') THEN CONCAT('Sr. ', nome)
+        ELSE CONCAT('Sra. ', nome)
+    END AS nome
+FROM nomes;
