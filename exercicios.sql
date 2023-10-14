@@ -81,7 +81,7 @@ FROM produtos;
 
 
 
--- Exercicio 2 D
+-- Exercicio 3 A
 
 CREATE TABLE eventos (
     data_evento DATETIME
@@ -94,3 +94,10 @@ VALUES
     ('2023-11-05'),
     ('2023-11-12'),
     ('2023-12-02');
+
+
+
+-- Exercicio 3 B
+
+INSERT INTO eventos (data_evento) 
+VALUES(now());
