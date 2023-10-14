@@ -64,3 +64,10 @@ VALUES
 
 SELECT ROUND(preco, 2) AS preco
 FROM produtos;
+
+
+
+-- Exercicio 2 C
+
+SELECT produto, preco, ABS(quantidade) as qtdAbsoluta
+FROM produtos;
