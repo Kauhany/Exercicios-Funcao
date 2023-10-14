@@ -213,7 +213,7 @@ SELECT calcularFatorial(5) AS resultado_fatorial;
 
 
 
--- Exercicio 7 A
+-- Exercicio 7 B
 
 DELIMITER //
 CREATE FUNCTION calcularExponencial(base DECIMAL(10, 2), expoente DECIMAL(10, 2))
@@ -228,3 +228,26 @@ END;
 DELIMITER ;
 
 SELECT calcularExponencial(2, 3) AS resultado_exponencial;
+
+
+
+-- Exercicio 7 C
+
+DELIMITER //
+CREATE FUNCTION verificarPalindromo(palavra VARCHAR(255))
+RETURNS INT
+DETERMINISTIC
+BEGIN
+    DECLARE inversa VARCHAR(255);
+    SET inversa = REVERSE(palavra);
+    
+    IF palavra = inversa THEN
+        RETURN 1;
+    ELSE
+        RETURN 0;
+    END IF;
+END;
+//
+DELIMITER ;
+
+SELECT verificarPalindromo('ana') AS resultado;
