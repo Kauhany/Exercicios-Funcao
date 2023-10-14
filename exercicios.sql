@@ -57,3 +57,10 @@ VALUES
     ('Produto 4', 15, 15),
     ('Produto 5', 29.99, 40);
     
+
+
+    
+-- Exercicio 2 B
+
+SELECT ROUND(preco, 2) AS preco
+FROM produtos;
