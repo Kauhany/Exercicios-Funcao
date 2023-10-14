@@ -125,3 +125,15 @@ FROM eventos;
 SELECT produto, preco, quantidade,
     IF(quantidade > 0, 'Em estoque', 'Fora de estoque') AS estoque
 FROM produtos;
+
+
+
+-- Exercicio 4 B
+
+SELECT produto, preco, quantidade,
+    CASE
+        WHEN preco < 10.0 THEN 'Barato'
+        WHEN preco >= 10.0 AND preco <= 50.0 THEN 'Médio'
+        WHEN preco > 50.0 THEN 'Caro'
+    END AS categoriaPreco
+FROM produtos;
