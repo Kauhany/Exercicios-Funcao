@@ -38,3 +38,22 @@ SELECT
         ELSE CONCAT('Sra. ', nome)
     END AS nome
 FROM nomes;
+
+
+
+-- Exercicio 2 A
+
+CREATE TABLE produtos (
+    produto VARCHAR(255),
+    preco DECIMAL(10, 3),
+    quantidade INT
+);
+
+INSERT INTO produtos (produto, preco, quantidade)
+VALUES
+    ('Produto 1', 19.99, 50),
+    ('Produto 2', 9.49, 30),
+    ('Produto 3', 49.95, 20),
+    ('Produto 4', 15, 15),
+    ('Produto 5', 29.99, 40);
+    
