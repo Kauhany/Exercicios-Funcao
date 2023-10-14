@@ -101,3 +101,12 @@ VALUES
 
 INSERT INTO eventos (data_evento) 
 VALUES(now());
+
+SELECT * FROM eventos;
+
+
+
+
+-- Exercicio 3 C
+
+SELECT DATEDIFF('2023-10-20', '2023-10-15') AS numero_de_dias;
