@@ -210,3 +210,21 @@ END;
 DELIMITER ;
 
 SELECT calcularFatorial(5) AS resultado_fatorial;
+
+
+
+-- Exercicio 7 A
+
+DELIMITER //
+CREATE FUNCTION calcularExponencial(base DECIMAL(10, 2), expoente DECIMAL(10, 2))
+RETURNS DECIMAL(10, 2)
+DETERMINISTIC
+BEGIN
+    DECLARE resultado DECIMAL(10, 2);
+    SET resultado = POWER(base, expoente);
+    RETURN resultado;
+END;
+//
+DELIMITER ;
+
+SELECT calcularExponencial(2, 3) AS resultado_exponencial;
