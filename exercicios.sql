@@ -71,3 +71,10 @@ FROM produtos;
 
 SELECT produto, preco, ABS(quantidade) as qtdAbsoluta
 FROM produtos;
+
+
+
+-- Exercicio 2 D
+
+SELECT AVG(preco) AS mediaPrecos
+FROM produtos;
