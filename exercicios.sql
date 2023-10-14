@@ -21,3 +21,9 @@ VALUES ('Roberta'),
 
 SELECT UPPER(nome) AS nome
 FROM nomes;
+
+
+-- Exercicio 1 C
+
+SELECT nome, LENGTH(nome) AS tamanhoNome
+FROM nomes;
