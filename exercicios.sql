@@ -110,3 +110,10 @@ SELECT * FROM eventos;
 -- Exercicio 3 C
 
 SELECT DATEDIFF('2023-10-20', '2023-10-15') AS numero_de_dias;
+
+
+
+-- Exercicio 3 D
+
+SELECT data_evento, DAYNAME(data_evento) AS nome_dia_da_semana
+FROM eventos;
