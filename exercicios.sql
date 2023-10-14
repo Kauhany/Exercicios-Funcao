@@ -78,3 +78,19 @@ FROM produtos;
 
 SELECT AVG(preco) AS mediaPrecos
 FROM produtos;
+
+
+
+-- Exercicio 2 D
+
+CREATE TABLE eventos (
+    data_evento DATETIME
+);
+
+INSERT INTO eventos (data_evento)
+VALUES
+    ('2023-10-15'),
+    ('2023-10-20'),
+    ('2023-11-05'),
+    ('2023-11-12'),
+    ('2023-12-02');
