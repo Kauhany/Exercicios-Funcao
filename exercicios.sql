@@ -171,3 +171,11 @@ FROM produtos;
 SELECT produto, preco
 FROM produtos
 WHERE preco = (SELECT MAX(preco) FROM produtos);
+
+
+
+-- Exercicio 6 A
+
+SELECT produto, preco
+FROM produtos
+WHERE preco = (SELECT MIN(preco) FROM produtos);
